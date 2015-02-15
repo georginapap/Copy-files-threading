@@ -1,0 +1,20 @@
+typedef struct node *nodeptr;
+typedef struct node
+{       int newsock_;
+    	char *path_;
+	pthread_mutex_t *mutx;
+ 	nodeptr next;
+ 
+}node;
+
+extern nodeptr queue;
+
+
+int empty(nodeptr n);
+//int search_in_list(nodeptr n, int job);
+void insert(nodeptr *ptrnode, char *thepath,  int newsock, pthread_mutex_t *mutx );
+nodeptr delete();
+//int delete_running(nodeptr *ptrnode, pid_t pid);
+void print();
+//int size(nodeptr n);
+
